@@ -1,0 +1,103 @@
+@import "../../styles.scss";
+
+.delete-modal {
+    width: 100vw; 
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0, .5);  
+
+    .modal-wrapper {
+        width: 100%;
+        max-width: 500px; 
+        min-height: 100px;
+        background-color: $white;
+        position: relative; 
+        border-radius: 16px; 
+        margin: 10px;
+        box-shadow: rgba(100,100,111, 0.2) 0px 7px 29px 0px;
+        padding: 20px;
+    }
+    .delete-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        color: $text;
+    }
+    .form-title {
+        font-weight: 600;
+        font-size: 1.25rem;
+    }
+    .form-error {
+        color: $dark-red;
+    }
+    .form-input {
+        .label {
+            display: block; 
+            min-height: 25px; 
+            cursor: pointer;
+            width: fit-content;
+        }
+        .input {
+            width: -webkit-fill-available;
+            font-size: 1rem;
+            border-radius: 12px;
+            height: 40px;
+            padding: 0 10px;
+            transition: .3s ease all;
+            background-color: $white;
+            border: 1px solid $border;
+            color: $text;
+            &:focus {
+                outline: none;
+                box-shadow:  0px 4px 10px rgba(0, 0, 0, .2);
+            }
+        }
+    }
+    .btn-container {
+        display: flex;
+        align-self: end;
+        gap: 20px;
+        button {
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 8px 12px;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: .15s ease-in-out;
+        }
+        .btn-close {            
+            background-color: transparent;
+            color: $text2;
+        }
+        .btn-delete {
+            background-color: $light-red;
+            box-shadow:  0px 4px 10px rgba(0, 0, 0, .2);
+            color: $white; 
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            &:hover,
+            &:disabled {
+                background-color: $dark-red;          
+            }        
+            svg {
+                animation: rotate 1s linear infinite;
+            }
+            @keyframes rotate {
+                100% {
+                  transform: rotate(360deg);
+                }
+            }
+        }
+    }
+
+}

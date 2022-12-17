@@ -1,0 +1,25 @@
+@import "../../styles.scss";
+
+.item-list-container {
+    .loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $text2;
+        svg {
+            animation: rotate 1s linear infinite;
+            font-size: 5rem;
+    
+        }
+        @keyframes rotate {
+            100% {
+              transform: rotate(360deg);
+            }
+        }
+    }
+    .error {
+        text-align: center;
+        color: $dark-red;        
+    }
+
+}

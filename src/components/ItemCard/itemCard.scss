@@ -1,0 +1,52 @@
+@import "../../styles.scss";
+
+.item-card {
+    background-color:rgb(0 0 0/1);
+    border-radius: 12px;
+    position: relative;
+    img {  
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 12px; 
+        transition: opacity .3s ease;
+    }
+    button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: $light-red;
+        background-color: rgba(0,0,0,.5);
+        user-select: none;
+        border: 2px solid $light-red;
+        padding: 4px 12px;
+        font-size: .875rem;
+        line-height: 1.5;
+        border-radius: 12px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: opacity .3s ease;
+        opacity: 0;
+    }
+    h4 {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: $white;
+        font-size: 1.125rem;
+        opacity: 0;
+        transition: opacity .3s ease;
+    }
+
+    &:hover {
+        img {
+            opacity: 0.7;
+        }
+        button {
+            opacity: 1;
+        }
+        h4 {
+            opacity: 1;
+        }
+    }
+}

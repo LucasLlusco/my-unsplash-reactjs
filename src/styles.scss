@@ -1,0 +1,26 @@
+$light-green: #27ae60;
+$dark-green: #20914f;
+$light-red: #eb5757;
+$dark-red: #df4242;;
+$white: #fff;
+$border: #bdbdbd;
+$text: #213547;
+$text2: #a5a5a5;
+
+@mixin laptop { 
+    @media screen and (max-width: 1200px) {   
+        @content;
+    }
+}
+  
+@mixin tablet {    
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 576px) {
+        @content;
+    }
+}

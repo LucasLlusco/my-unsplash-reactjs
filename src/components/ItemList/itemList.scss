@@ -1,0 +1,28 @@
+@import "../../styles.scss";
+
+.item-list {
+    padding: 30px 130px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+    gap: 30px;
+
+    .item-grid-col-2 {
+        grid-column: span 2;
+    }
+    .item-grid-row-2 {
+        grid-row: span 2;
+    }
+    @include laptop {
+        padding: 30px 10px; 
+    }
+    @include tablet {
+        grid-auto-rows: 200px;  
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    @include mobile {
+        grid-auto-rows: 180px;              
+    }
+}

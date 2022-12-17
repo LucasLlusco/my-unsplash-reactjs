@@ -1,0 +1,65 @@
+@import "../../styles.scss";
+
+.header {
+    padding: 30px 130px; 
+    @include laptop{
+        padding: 30px 10px;
+    }
+    nav {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        @include mobile {
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        .nav-bottom {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            @include mobile {
+                width: -webkit-fill-available;
+                flex: initial;
+                gap: 10px;
+            }
+        }
+        .btn-add {
+            user-select: none;
+            border: 1px solid transparent;
+            padding: 8px 12px;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: .15s ease-in-out;
+            background-color: $light-green;
+            box-shadow:  0px 4px 10px rgba(0, 0, 0, .2);
+            color: $white; 
+            display: flex;
+            &:hover,
+            &:disabled {
+                background-color: $dark-green;          
+            }
+            @include mobile {
+                padding: 8px;
+            }
+            svg {
+                display: none;
+                font-size: 1.5rem;
+                @include mobile {
+                    display: initial;
+                }
+            }
+            .text {
+                @include mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import "../../styles.scss";
+
+.search-bar {
+    position: relative;
+    svg {
+        position: absolute;
+        left: 10px;
+        bottom: 12px;
+        z-index: 5;
+        font-size: 1.125rem;
+        color: #828282;
+    }
+    input {
+        width: -webkit-fill-available;
+        font-size: 1rem;
+        border-radius: 12px;
+        height: 40px;
+        padding: 0 10px 0 35px;
+        transition: .3s ease all;
+        background-color: $white;
+        border: 1px solid $border;
+        color: $text;
+        &:focus {
+            outline: none;
+            box-shadow:  0px 4px 10px rgba(0, 0, 0, .2);
+        }
+    }
+}
