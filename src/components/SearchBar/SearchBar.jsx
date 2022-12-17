@@ -11,7 +11,7 @@ const SearchBar = () => {
     if(searchWord.length === 0) {
       setImagesFiltered(images); 
     }
-    if(searchWord.length > 2) {
+    if(searchWord.length >= 2) {
       const filtered = images.filter((item) => item.label.toLowerCase().includes(searchWord));
       setImagesFiltered(filtered);
     } 
